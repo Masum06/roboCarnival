@@ -1,0 +1,155 @@
+html, body
+{
+    height: 100%;
+    margin: 0;
+}
+
+.image-block{
+	position: relative;
+	color: white;
+	height: 100%;
+	margin: 0;
+	padding-top: 1px;
+	overflow: hidden;
+	/*margin-bottom: 10px;*/
+
+}
+
+.div1{
+	background: url(../res/real.png) fixed;
+	background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.div2{
+	background: url(../res/sawyer.jpg) fixed;
+	background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+.div3{
+	background: url(../res/cheetah.gif) fixed;
+	width: 100%;
+	background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.div4{
+	background: url(../res/tesla-autopilot.jpg) fixed;
+	width: 100%;
+	background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.margin-auto{
+	margin: auto;
+	width: 50%;
+}
+
+
+.threeD {
+	color: white;
+	text-shadow: 0 1px 0 #ccc,
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.2),
+	0 20px 20px rgba(0,0,0,.15);
+	font-size: 4em;
+}
+
+.block{
+	position: relative;
+	width: 55%;
+	height: 150px;
+	background-color: rgb(14, 81, 110);
+	border-radius: 75px;
+}
+
+.right{
+	right: 0px;
+}
+
+.left{
+	left: -75px;
+}
+
+.top{
+	top: 30px;
+}
+
+.bottom{
+	bottom: 0px;
+}
+
+#title{
+	margin-left: 30px;
+	margin-top: 39px;
+}
+
+.floating-text{
+	position: relative;
+	right: 0px;
+	top: 150px;
+	text-align: center;
+	font-size: 2em;
+	background-color: rgba(50, 50, 50, .75);
+	border-radius: 10px;
+	width: 550px;
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	h2{
+		padding: 0px;
+	}
+}
+
+header{
+	ul{
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: rgb(14, 81, 110);
+	    li {
+		    float: right;
+		    a {
+			    display: block;
+			    color: white;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			}
+		}
+		a:hover:not(.active) {
+		    background-color: rgb(6, 61, 90);
+		    text-decoration: none;
+		    color: white;
+		}
+		.active {
+		background-color: #920040;
+		}
+	}
+}
+
+
+.navigation{
+	width: 100%;
+	position: fixed;
+	z-index: 5;
+}
+
+.brs-logo{
+	position: relative;
+	margin-top: 50px;
+}
