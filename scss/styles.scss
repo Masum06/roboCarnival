@@ -8,6 +8,7 @@ html, body
 	position: relative;
 	color: white;
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding-top: 1px;
 	overflow: hidden;
@@ -51,6 +52,7 @@ html, body
 
 
 .threeD {
+	font-family: 'Nova Flat', cursive;
 	color: white;
 	text-shadow: 0 1px 0 #ccc,
 	0 2px 0 #c9c9c9,
@@ -67,50 +69,69 @@ html, body
 	font-size: 4em;
 }
 
-.block{
-	position: relative;
-	width: 55%;
+.bottom-right{
+	position: absolute;
+	
+	right: -75px;
+	text-align: left;
+
+	//width: 55%;
+	bottom: 15px;
+	padding-left: 30px;
 	height: 150px;
-	background-color: rgb(14, 81, 110);
+	background-color: rgba(123, 18, 35, .9);
 	border-radius: 75px;
+	h1{
+		margin-top: 39px;
+		margin-right: 80px;
+	}
+	box-shadow: 10px 10px 5px rgba(0,0,0,.5);
 }
 
-.right{
-	right: 0px;
-}
-
-.left{
+.top-left{
+	position: absolute;
+	
 	left: -75px;
+	text-align: left;
+
+	//width: 55%;
+	top: 15px;
+	padding-right: 30px;
+	height: 150px;
+	background-color: rgba(123, 18, 35, .9);
+	border-radius: 75px;
+	h1{
+		margin-top: 10px;
+	}
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.top{
-	top: 30px;
-}
-
-.bottom{
-	bottom: 0px;
-}
 
 #title{
-	margin-left: 30px;
-	margin-top: 39px;
+	//position: absolute;
+	//margin: auto;
+	font-family: 'Nova Flat', cursive;
 }
 
 .floating-text{
-	position: relative;
+	font-family: 'Federant', cursive;
+	font-size: 125%;
+	position: absolute;
 	right: 0px;
 	top: 150px;
 	text-align: center;
 	font-size: 2em;
-	background-color: rgba(50, 50, 50, .75);
+	background-color: rgba(14, 81, 110, .75);//rgba(172, 31, 36, .75);
 	border-radius: 10px;
-	width: 550px;
+	width: 450px;
 	margin: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	margin-bottom: 30px;
+	text-shadow: 3px 3px #000000;
+	//margin-bottom: 30px;
 	h2{
 		padding: 0px;
+		//text-shadow: 3px 3px;
 	}
 }
 
@@ -150,6 +171,39 @@ header{
 }
 
 .brs-logo{
-	position: relative;
+	//position: relative;
 	margin-top: 50px;
+	//width: 100%;
+}
+
+@media (max-width:768px) {
+	.floating-text{
+		width:100%;
+		top: auto;
+		bottom: 0px;
+		padding: 15px;
+	}
+
+	.bottom-right{
+		top: 100px;
+		font-size: 70%;
+		text-align: right;
+		width: 70%;
+		h1{
+			margin-top: 35px;
+			//margin-bottom: auto;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width:510px) {
+	.bottom-right{
+		h1{
+			//font-size: 70%;
+			margin-top: auto;
+			margin-bottom: auto;
+			//dtext-align: center;
+		}
+	}
 }
