@@ -69,41 +69,53 @@ html, body
 	font-size: 4em;
 }
 
-.bottom-right{
+.round-box{
 	position: absolute;
-	
-	right: -75px;
-	text-align: left;
-
+	text-align: center;
 	//width: 55%;
-	bottom: 15px;
-	padding-left: 30px;
-	height: 150px;
 	background-color: rgba(123, 18, 35, .9);
 	border-radius: 75px;
-	h1{
-		margin-top: 39px;
-		margin-right: 80px;
-	}
 	box-shadow: 10px 10px 5px rgba(0,0,0,.5);
+	height: 150px;
+	h1{
+		display: table-cell; // Vertical allignment works
+		vertical-align: middle;
+		height: 150px;
+		margin: 0;
+		//padding: auto;
+	}
 }
 
-.top-left{
-	position: absolute;
-	
-	left: -75px;
-	text-align: left;
+.bottom {
+	bottom: 15px;
+}
 
-	//width: 55%;
-	top: 15px;
-	padding-right: 30px;
-	height: 150px;
-	background-color: rgba(123, 18, 35, .9);
-	border-radius: 75px;
+.right {
+	right: -75px;
+	padding-left: 30px;
 	h1{
-		margin-top: 10px;
+		padding-right: 90px;
 	}
-	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+	animation-name: slideBarLeft;
+	animation-duration: 3s;
+	-webkit-animation-name: slideBarLeft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+}
+
+.top {
+	top: 60px;
+}
+
+.left{
+	left: -75px;
+	padding-right: 30px;
+	h1{
+		padding-left: 90px;
+	}
+	-webkit-animation-name: slideBarRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+	animation-name: slideBarRight;
+	animation-duration: 3s;
 }
 
 
@@ -117,8 +129,6 @@ html, body
 	font-family: 'Federant', cursive;
 	font-size: 125%;
 	position: absolute;
-	right: 0px;
-	top: 150px;
 	text-align: center;
 	font-size: 2em;
 	background-color: rgba(14, 81, 110, .75);//rgba(172, 31, 36, .75);
@@ -133,6 +143,42 @@ html, body
 		padding: 0px;
 		//text-shadow: 3px 3px;
 	}
+}
+
+.floating-text-div1{
+	right: 0px;
+	top: 110px;
+	animation-name: slideLeft;
+	animation-duration: 5s;
+	-webkit-animation-name: slideLeft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+}
+
+.floating-text-div2{
+	left: 0px;
+	bottom: 100px;
+	animation-name: slideRight;
+	animation-duration: 5s;
+	-webkit-animation-name: slideRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+}
+
+.floating-text-div3 {
+	bottom: 20px;
+	left: 0px;
+	animation-name: slideRight;
+	animation-duration: 5s;
+	-webkit-animation-name: slideRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+}
+
+.floating-text-div4{
+	top: 60px;
+	right: 0px;
+	animation-name: slideLeft;
+	animation-duration: 5s;
+	-webkit-animation-name: slideLeft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
 }
 
 header{
@@ -184,26 +230,35 @@ header{
 		padding: 15px;
 	}
 
-	.bottom-right{
-		top: 100px;
+	.round-box{
+		
 		font-size: 70%;
-		text-align: right;
+
 		width: 70%;
-		h1{
-			margin-top: 35px;
-			//margin-bottom: auto;
-			text-align: center;
-		}
+	}
+
+	.bottom{
+		top: 60px;
 	}
 }
 
-@media (max-width:510px) {
-	.bottom-right{
-		h1{
-			//font-size: 70%;
-			margin-top: auto;
-			margin-bottom: auto;
-			//dtext-align: center;
-		}
-	}
+
+@keyframes slideLeft {
+	0% {right: -450px;}
+	100% {right: 0px;}
+}
+
+@keyframes slideRight {
+	0% {left: -450px;}
+	100% {left: 0px;}
+}
+
+@keyframes slideBarLeft {
+	0% {right: -550px;}
+	100% {right: -75px;}
+}
+
+@keyframes slideBarRight {
+	0% {left: -550px;}
+	100% {left: -75px;}
 }
