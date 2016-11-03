@@ -150,15 +150,16 @@
 
 $(function() {
   var options = {
-    videoId : 'INk2mNy1hmE',
-    start : 1
+    videoId : 'K-sCk8blLSM',
+    start : 1 ,
+    end : 64
   };
   $('body').tubular(options);
 });
 
 $('document').ready(function() {
-    var options = { videoId: 'INk2mNy1hmE', start: 3 };
-    $('.clearfix').tubular(options);
+    var options = { videoId: 'K-sCk8blLSM', start: 0, end: 64 };
+    $('#wrapper').tubular(options);
     // f-UGhWj1xww cool sepia hd
     // 49SKbS7Xwf4 beautiful barn sepia
 }); 

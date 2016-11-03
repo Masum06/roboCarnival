@@ -1,7 +1,8 @@
-html, body
+html, body, .main
 {
     height: 100%;
     margin: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .image-block{
@@ -12,37 +13,41 @@ html, body
 	margin: 0;
 	padding-top: 1px;
 	overflow: hidden;
+	z-index: 2;
 	/*margin-bottom: 10px;*/
 
 }
 
-.div1{
-	background: url(../res/real.png) fixed;
+/*.div1{
+	//background: url(../res/real.png) fixed;
 	background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center;
-}
+}*/
 
 .div2{
-	background: url(../res/sawyer.jpg) fixed;
+	background: url(../res/sawyer.jpg) ;
 	background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center;
+    z-index: 100;
 }
 .div3{
-	background: url(../res/cheetah.gif) fixed;
+	background: url(../res/cheetah.gif) ;
 	width: 100%;
 	background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center;
+    z-index: 100;
 }
 
 .div4{
-	background: url(../res/tesla-autopilot.jpg) fixed;
+	background: url(../res/tesla-autopilot.jpg) ;
 	width: 100%;
 	background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center;
+    z-index: 100;
 }
 
 .margin-auto{
@@ -52,7 +57,8 @@ html, body
 
 
 .threeD {
-	font-family: 'Nova Flat', cursive;
+	/*font-family: 'Nova Flat', cursive;*/
+	font-family: 'Oswald', sans-serif;
 	color: white;
 	text-shadow: 0 1px 0 #ccc,
 	0 2px 0 #c9c9c9,
@@ -126,7 +132,8 @@ html, body
 }
 
 .floating-text{
-	font-family: 'Federant', cursive;
+	font-family: 'Oswald', sans-serif;
+	/*font-family: 'Federant', cursive;*/
 	font-size: 125%;
 	position: absolute;
 	text-align: center;
@@ -138,6 +145,7 @@ html, body
 	padding-top: 30px;
 	padding-bottom: 30px;
 	text-shadow: 3px 3px #000000;
+	z-index: 200;
 	//margin-bottom: 30px;
 	h2{
 		padding: 0px;
@@ -152,6 +160,7 @@ html, body
 	animation-duration: 5s;
 	-webkit-animation-name: slideLeft; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    z-index: 200;
 }
 
 .floating-text-div2{
@@ -213,7 +222,7 @@ header{
 .navigation{
 	width: 100%;
 	position: fixed;
-	z-index: 5;
+	z-index: 9999;
 }
 
 .brs-logo{
@@ -261,4 +270,8 @@ header{
 @keyframes slideBarRight {
 	0% {left: -550px;}
 	100% {left: -75px;}
+}
+
+#wrapper{
+	z-index: -99;
 }

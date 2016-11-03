@@ -1,6 +1,7 @@
-html, body {
+html, body, .main {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Oswald', sans-serif; }
 
 .image-block {
   position: relative;
@@ -10,40 +11,45 @@ html, body {
   margin: 0;
   padding-top: 1px;
   overflow: hidden;
+  z-index: 2;
   /*margin-bottom: 10px;*/ }
 
-.div1 {
-  background: url(../res/real.png) fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
+/*.div1{
+	//background: url(../res/real.png) fixed;
+	background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}*/
 .div2 {
-  background: url(../res/sawyer.jpg) fixed;
+  background: url(../res/sawyer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  z-index: 100; }
 
 .div3 {
-  background: url(../res/cheetah.gif) fixed;
+  background: url(../res/cheetah.gif);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  z-index: 100; }
 
 .div4 {
-  background: url(../res/tesla-autopilot.jpg) fixed;
+  background: url(../res/tesla-autopilot.jpg);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  z-index: 100; }
 
 .margin-auto {
   margin: auto;
   width: 50%; }
 
 .threeD {
-  font-family: 'Nova Flat', cursive;
+  /*font-family: 'Nova Flat', cursive;*/
+  font-family: 'Oswald', sans-serif;
   color: white;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
   font-size: 4em; }
@@ -95,7 +101,8 @@ html, body {
   font-family: 'Nova Flat', cursive; }
 
 .floating-text {
-  font-family: 'Federant', cursive;
+  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Federant', cursive;*/
   font-size: 125%;
   position: absolute;
   text-align: center;
@@ -106,7 +113,8 @@ html, body {
   margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  text-shadow: 3px 3px #000000; }
+  text-shadow: 3px 3px #000000;
+  z-index: 200; }
   .floating-text h2 {
     padding: 0px; }
 
@@ -118,7 +126,8 @@ html, body {
   -webkit-animation-name: slideLeft;
   /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 5s;
-  /* Safari 4.0 - 8.0 */ }
+  /* Safari 4.0 - 8.0 */
+  z-index: 200; }
 
 .floating-text-div2 {
   left: 0px;
@@ -174,7 +183,7 @@ header ul {
 .navigation {
   width: 100%;
   position: fixed;
-  z-index: 5; }
+  z-index: 9999; }
 
 .brs-logo {
   margin-top: 50px; }
@@ -212,5 +221,7 @@ header ul {
     left: -550px; }
   100% {
     left: -75px; } }
+#wrapper {
+  z-index: -99; }
 
 /*# sourceMappingURL=styles.css.map */
